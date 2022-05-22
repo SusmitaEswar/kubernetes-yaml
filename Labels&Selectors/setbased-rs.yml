@@ -4,11 +4,11 @@ metadata:
   name: nginx-rs
 spec:
   replicas: 3
-  selctor: 
+  selector: 
     matchLabels:
       env: prod
     matchExpressions:
-    - { key: tier, operator: In, value: [front end] }
+    - { key: tier, operator: In, values: [frontend] }
   template:
     metadata:
       name: nginx
